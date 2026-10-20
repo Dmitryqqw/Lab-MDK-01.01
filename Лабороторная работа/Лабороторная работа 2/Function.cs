@@ -22,6 +22,18 @@ namespace Лабороторная_работа_2
                 Console.WriteLine($"{i + 1}. {names[i]} — {prices[i]} руб., {counts[i]} шт.");
             }
         }
+
+        static int ReadInt(string prompt)
+        {
+            while (true)
+            {
+                Console.Write(prompt);
+                string input = Console.ReadLine();
+                if (int.TryParse(input, out int value))
+                    return value;
+                Console.WriteLine("Ошибка: введите целое число.");
+            }
+        }
     }
 }
 
