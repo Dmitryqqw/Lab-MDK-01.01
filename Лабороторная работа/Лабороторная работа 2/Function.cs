@@ -12,9 +12,9 @@ namespace Лабороторная_работа_2
         static string[] names = { "велосипед", "самокат", "ролики", "лыжи", "скейтборд" };
         static int[] prices = { 1200, 700, 450, 1600, 950 };
         static int[] counts = { 12, 20, 15, 8, 10 };
-    }
+    
 
-     public static void PrintPark()
+        public static void PrintPark()
         {
             Console.WriteLine("Парк проката:");
             for (int i = 0; i < names.Length; i++)
@@ -89,8 +89,27 @@ namespace Лабороторная_работа_2
         {
             int[] ordered = new int[names.Length];
 
-           
+            while (true)
+            {
+                int num = ReadTransportNumber();
+                if (num == 0) break;
+                int qty = ReadQuantity();
+                ordered[num - 1] += qty;
+            }
+
+            int problem = CheckAvailability(ordered);
+            if (problem != -1)
+            {
+                Console.WriteLine($"Не хватает транспорта: {names[problem]} " +
+                                  $"(требуется {ordered[problem]}, в наличии {counts[problem]}).");
+            }
+            else
+            {
+                int cost = CalculateCost(ordered);
+                ApplyOrder(ordered);
+                Console.WriteLine($"Стоимость заказа: {cost} руб.");
+            }
         }
     }
 }
-
+        
