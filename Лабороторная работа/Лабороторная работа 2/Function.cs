@@ -97,5 +97,9 @@ namespace Лабороторная_работа_2
                 ordered[num - 1] += qty;
             }
         }
+
+
+
+    }
 }
 

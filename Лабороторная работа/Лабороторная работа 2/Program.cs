@@ -10,9 +10,9 @@ namespace Лабороторная_работа_2
     {
         static void Main()
         {
-         
+            Functions.PrintPark();
+            Functions.ProcessOrder();
+            Functions.PrintRemains();
         }
     }
 }
-    
-
