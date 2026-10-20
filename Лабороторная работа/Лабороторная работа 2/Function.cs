@@ -89,17 +89,8 @@ namespace Лабороторная_работа_2
         {
             int[] ordered = new int[names.Length];
 
-            while (true)
-            {
-                int num = ReadTransportNumber();
-                if (num == 0) break;
-                int qty = ReadQuantity();
-                ordered[num - 1] += qty;
-            }
+           
         }
-
-
-
     }
 }
 
