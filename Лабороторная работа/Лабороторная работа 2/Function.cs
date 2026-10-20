@@ -46,6 +46,15 @@ namespace Лабороторная_работа_2
             }
         }
 
+        static int ReadQuantity()
+        {
+            while (true)
+            {
+                int qty = ReadInt("Введите количество: ");
+                if (qty >= 0) return qty;
+                Console.WriteLine("Ошибка: количество не может быть отрицательным.");
+            }
+        }
 
 
     }
