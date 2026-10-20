@@ -61,7 +61,13 @@ namespace Лабороторная_работа_2
                 if (ordered[i] > counts[i]) return i;
             return -1;
         }
-
+        static int CalculateCost(int[] ordered)
+        {
+            int total = 0;
+            for (int i = 0; i < prices.Length; i++)
+                total += prices[i] * ordered[i];
+            return total;
+        }
 
     }
 }
