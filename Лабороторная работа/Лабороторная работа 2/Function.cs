@@ -34,6 +34,20 @@ namespace Лабороторная_работа_2
                 Console.WriteLine("Ошибка: введите целое число.");
             }
         }
+
+        static int ReadTransportNumber()
+        {
+            while (true)
+            {
+                int num = ReadInt("Введите номер транспорта (0 — конец заказа): ");
+                if (num == 0) return 0;
+                if (num >= 1 && num <= names.Length) return num;
+                Console.WriteLine($"Ошибка: номер должен быть от 1 до {names.Length} или 0.");
+            }
+        }
+
+
+
     }
 }
 
