@@ -105,9 +105,7 @@ namespace Лабороторная_работа_2
             }
             else
             {
-                int cost = CalculateCost(ordered);
-                ApplyOrder(ordered);
-                Console.WriteLine($"Стоимость заказа: {cost} руб.");
+
             }
         }
     }
