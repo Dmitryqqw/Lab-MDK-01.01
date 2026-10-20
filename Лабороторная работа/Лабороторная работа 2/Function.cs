@@ -55,6 +55,12 @@ namespace Лабороторная_работа_2
                 Console.WriteLine("Ошибка: количество не может быть отрицательным.");
             }
         }
+        static int CheckAvailability(int[] ordered)
+        {
+            for (int i = 0; i < counts.Length; i++)
+                if (ordered[i] > counts[i]) return i;
+            return -1;
+        }
 
 
     }
