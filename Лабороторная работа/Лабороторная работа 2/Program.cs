@@ -10,7 +10,7 @@ namespace Лабороторная_работа_2
     {
         static void Main()
         {
-
+         
         }
     }
 }
