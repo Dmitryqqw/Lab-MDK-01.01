@@ -69,6 +69,11 @@ namespace Лабороторная_работа_2
             return total;
         }
 
+        static void ApplyOrder(int[] ordered)
+        {
+            for (int i = 0; i < counts.Length; i++)
+                counts[i] -= ordered[i];
+        }
     }
 }
 
